@@ -5,6 +5,7 @@ const isValidCompanyUsername = (username, firstName, lastName) => {
   return regex.test(username);
 };
 
+m
 module.exports = {
-  swapAllCases,
+  isValidCompanyUsername,
 };
