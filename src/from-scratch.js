@@ -64,17 +64,17 @@ $: This asserts the end of the string.
 */
 const matchAllNumbers = (str) => str.match(/\d+/g) || [];
 
-const matchAllNumbersAsNumbers = (str) => {};
+const matchAllNumbersAsNumbers = (str) => (str.match(/\d+/g) || []).map(Number);
 
-const matchAllWords = (str) => {};
+const matchAllWords = (str) => { };
 
-const replaceAllNumbers = (str) => {};
+const replaceAllNumbers = (str) => { };
 
-const fixFileName = (str) => {};
+const fixFileName = (str) => { };
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => { };
 
-const camelToSnakeCase = (str) => {};
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
