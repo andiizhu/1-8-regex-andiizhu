@@ -68,13 +68,16 @@ const matchAllNumbersAsNumbers = (str) => (str.match(/\d+/g) || []).map(Number);
 
 const matchAllWords = (str) => str.match(/[a-z']+/gi) || [];
 
-const replaceAllNumbers = (str) => {};
+const replaceAllNumbers = (str) => str.replace(/\d+/g, "???")
+// g = in regex is global which grabs every instance of the regexes condition/pattern?
+// \d will grab any digit and the + command means more than one (still a bit confused by this sometimes)
+// and ??? is the replacement for the numbers found in the strings.
 
-const fixFileName = (str) => {};
+const fixFileName = (str) => { };
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => { };
 
-const camelToSnakeCase = (str) => {};
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
