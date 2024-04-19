@@ -75,9 +75,13 @@ const replaceAllNumbers = (str) => str.replace(/\d+/g, "???");
 
 const fixFileName = (str) => str.replace(/\s+/g, "_");
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => str.replace(/\b[A-Z]{2,}\b/g, 'REDACTED')
+// \b = is to ensure that there is a barrier/boundary for [A-Z] which ensures that we can check for all letters capitalized from A-Z
+// {2, } = is the quantity, we want the capped letters to be apparent in the string atleast twice
+// \b is used again to stop the barrier between these conditions and g is global to catch all that applies.
 
-const camelToSnakeCase = (str) => {};
+
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
