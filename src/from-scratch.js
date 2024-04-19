@@ -14,28 +14,43 @@ const hasPunctuationEnd = (str) => /[!.?]$/.test(str);
 
 const hasNothingOrDigits = (str) => /^(\d*|\s*)$/g.test(str);
 
-const hasNoFlippers = (str) => !/[clikoxBCDEHIKOX]/.test(str)
+const hasNoFlippers = (str) => !/[clikoxBCDEHIKOX]/.test(str);
 // [] = allows for us to check for all of these letters upper/lowercase are within the string
 // ! = checks if none of these are NOT in the string it would return true this allows for the boolean value to be flipped
 
+const isValidEmail = (str) => /^[a-zA-z0-9_.]+@[a-z]+\.[a-z]{2,3}$/.test(str);
+/*
+/: This marks the beginning of the regular expression.
+^: This asserts the start of the string.
+[a-zA-Z0-9_.]+: This part matches the local part of the email address before the "@" symbol:
+    [a-zA-Z0-9_.]: Matches any uppercase or lowercase letter, digit, underscore, or dot.
+    +: Quantifier that matches one or more occurrences of the preceding pattern.
+@: This matches the "@" symbol.
+[a-z]+: This matches the domain name (excluding the top-level domain):
+    [a-z]: Matches any lowercase letter.
+    +: Quantifier that matches one or more occurrences of the preceding pattern.
+\.: This matches the dot (".") before the top-level domain.
+[a-z]{2,3}: This matches the top-level domain:
+    [a-z]: Matches any lowercase letter.
+    {2,3}: Quantifier that matches between 2 and 3 occurrences of the preceding pattern. This allows for top-level domains like "com", "org", "net", etc.
+$: This asserts the end of the string.
+*/
 
-const isValidEmail = (str) => { };
+const isValidPhoneNumber = (str) => {};
 
-const isValidPhoneNumber = (str) => { };
+const matchAllNumbers = (str) => {};
 
-const matchAllNumbers = (str) => { };
+const matchAllNumbersAsNumbers = (str) => {};
 
-const matchAllNumbersAsNumbers = (str) => { };
+const matchAllWords = (str) => {};
 
-const matchAllWords = (str) => { };
+const replaceAllNumbers = (str) => {};
 
-const replaceAllNumbers = (str) => { };
+const fixFileName = (str) => {};
 
-const fixFileName = (str) => { };
+const nameRedacter = (str) => {};
 
-const nameRedacter = (str) => { };
-
-const camelToSnakeCase = (str) => { };
+const camelToSnakeCase = (str) => {};
 
 module.exports = {
   helloWorldRegex,
