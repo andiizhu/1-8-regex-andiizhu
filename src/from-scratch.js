@@ -38,20 +38,43 @@ $: This asserts the end of the string.
 
 const isValidPhoneNumber = (str) =>
   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]+[0-9]{3}[-\s\.]+[0-9]{4}$/.test(str);
+/*
+/: This marks the beginning of the regular expression.
+^: This asserts the start of the string.
+[\+]?: This matches an optional "+" character at the beginning of the phone number:
+    [\+]?: [...] denotes a character class, which matches any character within it.
+    \+: Matches the "+" character.
+    ?: Quantifier that matches zero or one occurrence of the preceding pattern. This makes the "+" character optional.
+[(]?: This matches an optional opening parenthesis "(":
+    [(]?: Matches an opening parenthesis "(" if it exists.
+    ?: Quantifier that matches zero or one occurrence of the preceding pattern. This makes the "(" optional.
+[0-9]{3}: This matches exactly three digits (0-9):
+    [0-9]: Matches any digit from 0 to 9.
+    {3}: Quantifier that matches exactly three occurrences of the preceding pattern.
+[)]?: This matches an optional closing parenthesis ")":
+    [)]?: Matches a closing parenthesis ")" if it exists.
+    ?: Quantifier that matches zero or one occurrence of the preceding pattern. This makes the ")" optional.
+[-\s\.]+: This matches one or more occurrences of characters that can be a hyphen "-", whitespace "\s", or a dot ".". This allows for various phone number formats and separators.
+    [-\s\.]+: [-\s\.] is a character class that matches any of the characters "-", "\s" (whitespace), or ".".
+    +: Quantifier that matches one or more occurrences of the preceding pattern.
+[0-9]{3}: This matches exactly three digits (0-9) for the next part of the phone number.
+[-\s\.]+: This matches one or more occurrences of characters that can be a hyphen "-", whitespace "\s", or a dot ".". This allows for various phone number formats and separators.
+[0-9]{4}: This matches exactly four digits (0-9) for the last part of the phone number.
+$: This asserts the end of the string.
+*/
+const matchAllNumbers = (str) => str.match(/\d+/g) || [];
 
-const matchAllNumbers = (str) => { };
+const matchAllNumbersAsNumbers = (str) => {};
 
-const matchAllNumbersAsNumbers = (str) => { };
+const matchAllWords = (str) => {};
 
-const matchAllWords = (str) => { };
+const replaceAllNumbers = (str) => {};
 
-const replaceAllNumbers = (str) => { };
+const fixFileName = (str) => {};
 
-const fixFileName = (str) => { };
+const nameRedacter = (str) => {};
 
-const nameRedacter = (str) => { };
-
-const camelToSnakeCase = (str) => { };
+const camelToSnakeCase = (str) => {};
 
 module.exports = {
   helloWorldRegex,
