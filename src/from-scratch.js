@@ -8,29 +8,31 @@ const hasCatsOrDogs = (str) => /\b(cats|dogs)\b/i.test(str);
 
 const hasVowelStart = (str) => /^[aeiou]/gi.test(str);
 
-const hasPunctuationEnd = (str) => {};
+const hasPunctuationEnd = (str) => /[!.?]$/.test(str);
+// [ ] = in regards to regex this bracket allows for us to check for those specific puncuations within the string.
+// $ = in regex specifies that we want to check for the puncuation at the end of the string only
 
-const hasNothingOrDigits = (str) => {};
+const hasNothingOrDigits = (str) => { };
 
-const hasNoFlippers = (str) => {};
+const hasNoFlippers = (str) => { };
 
-const isValidEmail = (str) => {};
+const isValidEmail = (str) => { };
 
-const isValidPhoneNumber = (str) => {};
+const isValidPhoneNumber = (str) => { };
 
-const matchAllNumbers = (str) => {};
+const matchAllNumbers = (str) => { };
 
-const matchAllNumbersAsNumbers = (str) => {};
+const matchAllNumbersAsNumbers = (str) => { };
 
-const matchAllWords = (str) => {};
+const matchAllWords = (str) => { };
 
-const replaceAllNumbers = (str) => {};
+const replaceAllNumbers = (str) => { };
 
-const fixFileName = (str) => {};
+const fixFileName = (str) => { };
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => { };
 
-const camelToSnakeCase = (str) => {};
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
