@@ -36,21 +36,22 @@ const isValidEmail = (str) => /^[a-zA-z0-9_.]+@[a-z]+\.[a-z]{2,3}$/.test(str);
 $: This asserts the end of the string.
 */
 
-const isValidPhoneNumber = (str) => {};
+const isValidPhoneNumber = (str) =>
+  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]+[0-9]{3}[-\s\.]+[0-9]{4}$/.test(str);
 
-const matchAllNumbers = (str) => {};
+const matchAllNumbers = (str) => { };
 
-const matchAllNumbersAsNumbers = (str) => {};
+const matchAllNumbersAsNumbers = (str) => { };
 
-const matchAllWords = (str) => {};
+const matchAllWords = (str) => { };
 
-const replaceAllNumbers = (str) => {};
+const replaceAllNumbers = (str) => { };
 
-const fixFileName = (str) => {};
+const fixFileName = (str) => { };
 
-const nameRedacter = (str) => {};
+const nameRedacter = (str) => { };
 
-const camelToSnakeCase = (str) => {};
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
