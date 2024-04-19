@@ -14,25 +14,28 @@ const hasPunctuationEnd = (str) => /[!.?]$/.test(str);
 
 const hasNothingOrDigits = (str) => /^(\d*|\s*)$/g.test(str);
 
-const hasNoFlippers = (str) => {};
+const hasNoFlippers = (str) => !/[clikoxBCDEHIKOX]/.test(str)
+// [] = allows for us to check for all of these letters upper/lowercase are within the string
+// ! = checks if none of these are NOT in the string it would return true this allows for the boolean value to be flipped
 
-const isValidEmail = (str) => {};
 
-const isValidPhoneNumber = (str) => {};
+const isValidEmail = (str) => { };
 
-const matchAllNumbers = (str) => {};
+const isValidPhoneNumber = (str) => { };
 
-const matchAllNumbersAsNumbers = (str) => {};
+const matchAllNumbers = (str) => { };
 
-const matchAllWords = (str) => {};
+const matchAllNumbersAsNumbers = (str) => { };
 
-const replaceAllNumbers = (str) => {};
+const matchAllWords = (str) => { };
 
-const fixFileName = (str) => {};
+const replaceAllNumbers = (str) => { };
 
-const nameRedacter = (str) => {};
+const fixFileName = (str) => { };
 
-const camelToSnakeCase = (str) => {};
+const nameRedacter = (str) => { };
+
+const camelToSnakeCase = (str) => { };
 
 module.exports = {
   helloWorldRegex,
